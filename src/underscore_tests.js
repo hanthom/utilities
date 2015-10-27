@@ -32,28 +32,34 @@ var _ = { };
   // Like first, but for the last elements. If n is undefined, return just the
   // last element.
   _.last = function(array, n) {
-    var x = [];
     if (!n) {
       return array[array.length-1];
     }
-    for (var i = array.length-1; i > array.length - (n+1); i--) {
-      x[i] = array[i];
+    else if (n > array.length) {
+      return array;
     }
-    return x;
+    else {
+        return array.slice(array.length - n);
+    }
   };
 
   // Call iterator(value, key, collection) for each element of collection.
   // Accepts both arrays and objects.
   _.each = function(collection, iterator) {
+
   };
 
   // Returns the index at which value can be found in the array, or -1 if value
   // is not present in the array.
   _.indexOf = function(array, target){
+
   };
 
   // Return all elements of an array that pass a truth test.
   _.filter = function(collection, iterator) {
+    console.log('collection', collection);
+    console.log('iterator', iterator);
+    
   };
 
   // Return all elements of an array that don't pass a truth test.
@@ -61,7 +67,19 @@ var _ = { };
   };
 
   // Produce a duplicate-free version of the array.
-  _.uniq = function(array) {
+  _.uniq = function(array) { //THIS IS BROKEN!!!!!!!!!!!!!!!!!!!!!!!!
+    // var  newArray = [];
+    // newArray[0] = array[0];
+    // for (var i = 0; i < array.length; i++) {
+    //   for (var j = 0; j < newArray.length; j++) {
+    //     if (array[i] ===newArray[j]) {
+    //       delete array[i];
+    //       i--;
+    //     }
+    //   }
+    //   newArray.push(array[i]);
+    // }
+    // return newArray;
   };
 
 
