@@ -20,6 +20,9 @@ var _ = { };
     if (!n) {
       return array[0];
     }
+    if (n > array.length) {
+      return array;
+    }
     for (var i = 0; i < n; i++) {
       x[i] = array[i];
     }
