@@ -109,8 +109,6 @@ var _ = { };
 
   // Return the results of applying an iterator to each element.
   _.map = function(array, iterator) {
-    console.log('Array', array);
-    console.log('iterator', iterator);
     for (var i =0; i < array.length; i++) {
       array[i] = iterator(array[i]);
     }
@@ -121,10 +119,19 @@ var _ = { };
   // a certain property in it. E.g. take an array of people and return
   // an array of just their ages
   _.pluck = function(array, propertyName) {
+    var x = [];
+    for (var i=0; i < array.length; i++) {
+      x.push(array[i][propertyName]);
+    }
+    return x;
   };
 
   // Calls the method named by methodName on each value in the list.
   _.invoke = function(list, methodName, args) {
+    console.log('List', list);
+    console.log('methodName', methodName);
+    console.log('Args', args);
+    
   };
 
   // Reduces an array or object to a single value by repetitively calling
